@@ -1,0 +1,180 @@
+// Preloader hide after load
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      preloader.style.pointerEvents = "none";
+      setTimeout(() => preloader.remove(), 500);
+    }, 600);
+  }
+});
+
+// Year in footer
+document.addEventListener("DOMContentLoaded", () => {
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});
+
+// Scroll to top
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+  if (!scrollTopBtn) return;
+  if (window.scrollY > 320) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// Mobile nav toggle
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("open");
+    mobileMenu.classList.toggle("show");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("show");
+      menuToggle.classList.remove("open");
+    });
+  });
+}
+
+// Smooth scroll for nav links (desktop)
+document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute("href").substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      const top = target.offsetTop - 70;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  });
+});
+
+// Dark mode toggle with localStorage
+const darkToggle = document.getElementById("darkModeToggle");
+const rootBody = document.body;
+
+function applyTheme(theme) {
+  if (theme === "dark") {
+    rootBody.classList.add("dark");
+    if (darkToggle) darkToggle.textContent = "☀️";
+  } else {
+    rootBody.classList.remove("dark");
+    if (darkToggle) darkToggle.textContent = "🌙";
+  }
+}
+
+const savedTheme = localStorage.getItem("ths-theme");
+if (savedTheme === "dark" || savedTheme === "light") {
+  applyTheme(savedTheme);
+} else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  applyTheme("dark");
+}
+
+if (darkToggle) {
+  darkToggle.addEventListener("click", () => {
+    const newTheme = rootBody.classList.contains("dark") ? "light" : "dark";
+    applyTheme(newTheme);
+    localStorage.setItem("ths-theme", newTheme);
+  });
+}
+
+// Menu tabs
+const menuTabs = document.querySelectorAll(".menu-tab");
+const menuCategories = document.querySelectorAll(".menu-category");
+
+menuTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetKey = tab.dataset.menu;
+    menuTabs.forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    menuCategories.forEach((cat) => {
+      if (cat.id === `menu-${targetKey}`) {
+        cat.classList.add("active");
+      } else {
+        cat.classList.remove("active");
+      }
+    });
+  });
+});
+
+// IntersectionObserver animations
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = el.dataset.delay ? parseFloat(el.dataset.delay) : 0;
+        setTimeout(() => {
+          el.classList.add("visible");
+        }, delay * 1000);
+        observer.unobserve(el);
+      }
+    });
+  },
+  {
+    threshold: 0.12,
+  }
+);
+
+document.querySelectorAll("[data-animate]").forEach((el) => observer.observe(el));
+
+// WhatsApp order buttons
+function openWhatsAppDefault() {
+  const phone = "918240215306"; // your real number
+  const message = encodeURIComponent(
+    "Hi The healthy sip! I’d like to order some fresh juice & snacks."
+  );
+  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+}
+
+document.querySelectorAll(".order-whatsapp").forEach((btn) => {
+  btn.addEventListener("click", openWhatsAppDefault);
+});
+
+// Gallery lightbox
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+
+if (lightbox && lightboxImg && lightboxClose) {
+  document.querySelectorAll(".gallery-item img").forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("show");
+    });
+  });
+
+  lightboxClose.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("show");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      lightbox.classList.remove("show");
+    }
+  });
+}
