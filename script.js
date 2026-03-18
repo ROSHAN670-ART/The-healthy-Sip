@@ -1,152 +1,147 @@
-// Preloader hide after load
+// Preloader
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
-  if (preloader) {
-    setTimeout(() => {
-      preloader.style.opacity = "0";
-      preloader.style.pointerEvents = "none";
-      setTimeout(() => preloader.remove(), 500);
-    }, 600);
-  }
+  if (!preloader) return;
+  setTimeout(() => {
+    preloader.style.opacity = "0";
+    preloader.style.pointerEvents = "none";
+    setTimeout(() => preloader.remove(), 600);
+  }, 700);
 });
 
-// Year in footer
+// Year
 document.addEventListener("DOMContentLoaded", () => {
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
-// Scroll to top
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-window.addEventListener("scroll", () => {
-  if (!scrollTopBtn) return;
-  if (window.scrollY > 320) {
-    scrollTopBtn.classList.add("show");
-  } else {
-    scrollTopBtn.classList.remove("show");
-  }
-});
-
+// Scroll to top button
+const scrollTopBtn = document.getElementById("scrollTop");
 if (scrollTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 320) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+
   scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
-// Mobile nav toggle
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
+// Mobile nav
+const navToggle = document.getElementById("navToggle");
+const navMobile = document.getElementById("navMobile");
 
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("open");
-    mobileMenu.classList.toggle("show");
+if (navToggle && navMobile) {
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("open");
+    navMobile.classList.toggle("show");
   });
 
-  mobileMenu.querySelectorAll("a").forEach((link) => {
+  navMobile.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      mobileMenu.classList.remove("show");
-      menuToggle.classList.remove("open");
+      navMobile.classList.remove("show");
+      navToggle.classList.remove("open");
     });
   });
 }
 
-// Smooth scroll for nav links (desktop)
+// Smooth scroll for desktop nav
 document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
-    const targetId = link.getAttribute("href").substring(1);
-    const target = document.getElementById(targetId);
+    const id = link.getAttribute("href").substring(1);
+    const target = document.getElementById(id);
     if (target) {
-      const top = target.offsetTop - 70;
-      window.scrollTo({ top, behavior: "smooth" });
+      const offset = target.offsetTop - 80;
+      window.scrollTo({ top: offset, behavior: "smooth" });
     }
   });
 });
 
-// Dark mode toggle with localStorage
-const darkToggle = document.getElementById("darkModeToggle");
-const rootBody = document.body;
+// Dark / light mode toggle
+const darkToggle = document.getElementById("darkToggle");
+const body = document.body;
 
-function applyTheme(theme) {
-  if (theme === "dark") {
-    rootBody.classList.add("dark");
-    if (darkToggle) darkToggle.textContent = "☀️";
-  } else {
-    rootBody.classList.remove("dark");
+function setTheme(mode) {
+  if (mode === "light") {
+    body.classList.add("light");
     if (darkToggle) darkToggle.textContent = "🌙";
+  } else {
+    body.classList.remove("light");
+    if (darkToggle) darkToggle.textContent = "☀️";
   }
 }
 
-const savedTheme = localStorage.getItem("ths-theme");
-if (savedTheme === "dark" || savedTheme === "light") {
-  applyTheme(savedTheme);
-} else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  applyTheme("dark");
+const savedTheme = localStorage.getItem("ths-theme-v2");
+if (savedTheme === "light" || savedTheme === "dark") {
+  setTheme(savedTheme);
+} else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+  setTheme("light");
+} else {
+  setTheme("dark");
 }
 
 if (darkToggle) {
   darkToggle.addEventListener("click", () => {
-    const newTheme = rootBody.classList.contains("dark") ? "light" : "dark";
-    applyTheme(newTheme);
-    localStorage.setItem("ths-theme", newTheme);
+    const newMode = body.classList.contains("light") ? "dark" : "light";
+    setTheme(newMode);
+    localStorage.setItem("ths-theme-v2", newMode);
   });
 }
 
 // Menu tabs
 const menuTabs = document.querySelectorAll(".menu-tab");
-const menuCategories = document.querySelectorAll(".menu-category");
+const menuLists = document.querySelectorAll(".menu-list");
 
 menuTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    const targetKey = tab.dataset.menu;
+    const key = tab.dataset.menu;
     menuTabs.forEach((t) => t.classList.remove("active"));
     tab.classList.add("active");
 
-    menuCategories.forEach((cat) => {
-      if (cat.id === `menu-${targetKey}`) {
-        cat.classList.add("active");
+    menuLists.forEach((list) => {
+      if (list.id === `menu-${key}`) {
+        list.classList.add("active");
       } else {
-        cat.classList.remove("active");
+        list.classList.remove("active");
       }
     });
   });
 });
 
-// IntersectionObserver animations
+// IntersectionObserver for animations
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const delay = el.dataset.delay ? parseFloat(el.dataset.delay) : 0;
-        setTimeout(() => {
-          el.classList.add("visible");
-        }, delay * 1000);
-        observer.unobserve(el);
-      }
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const delay = el.dataset.delay ? parseFloat(el.dataset.delay) : 0;
+      setTimeout(() => {
+        el.classList.add("visible");
+      }, delay * 1000);
+      observer.unobserve(el);
     });
   },
-  {
-    threshold: 0.12,
-  }
+  { threshold: 0.15 }
 );
 
 document.querySelectorAll("[data-animate]").forEach((el) => observer.observe(el));
 
-// WhatsApp order buttons
-function openWhatsAppDefault() {
-  const phone = "918240215306"; // your real number
-  const message = encodeURIComponent(
-    "Hi The healthy sip! I’d like to order some fresh juice & snacks."
+// WhatsApp order buttons (combos)
+function openDefaultWA() {
+  const phone = "918240215306";
+  const msg = encodeURIComponent(
+    "Hi The healthy sip! I’d like to order a healthy combo."
   );
-  window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
 }
 
-document.querySelectorAll(".order-whatsapp").forEach((btn) => {
-  btn.addEventListener("click", openWhatsAppDefault);
+document.querySelectorAll(".order-wa").forEach((btn) => {
+  btn.addEventListener("click", openDefaultWA);
 });
 
 // Gallery lightbox
