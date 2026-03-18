@@ -2,576 +2,639 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>The healthy sip | Premium Juice Bar Kolkata</title>
+  <title>The Healthy Sip | Best Juice Shop in Kolkata</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
   <meta
     name="description"
-    content="The healthy sip, Jardabagan bridge, Jyangra, Baguiati, Kolkata. Premium juice bar with 100% fresh juices, smoothies and healthy snacks. No added sugar. Best juice shop in Kolkata."
+    content="The Healthy Sip, Kolkata — premium fresh juices, smoothies and energy snacks. Best juice shop in Kolkata for healthy drinks near you. Fresh juice Kolkata, no preservatives, no added sugar."
   />
   <meta
     name="keywords"
-    content="Best juice shop in Kolkata, Healthy juice near me, Fresh juice Kolkata, The healthy sip, Jardabagan bridge Baguiati"
+    content="Best juice shop in Kolkata, Healthy drinks near me, Fresh juice Kolkata, The Healthy Sip Kolkata, smoothies Kolkata, healthy snacks Kolkata"
   />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@500;700;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@600;800;900&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="https://img.icons8.com/color/96/juice.png" />
 </head>
+
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="pour-container">
-      <div class="bottle-neck"></div>
-      <div class="bottle-body">
-        <div class="bottle-liquid"></div>
+  <!-- Loader -->
+  <div id="loader" aria-label="Loading">
+    <div class="loader-card">
+      <div class="loader-glass">
+        <div class="loader-liquid"></div>
+        <div class="loader-highlight"></div>
       </div>
-      <div class="glass">
-        <div class="glass-liquid"></div>
+      <div class="loader-text">
+        <div class="loader-title">The Healthy Sip</div>
+        <div class="loader-sub">Filling your glass…</div>
       </div>
     </div>
-    <p class="loader-caption">Blending something refreshing for you...</p>
   </div>
 
   <!-- Floating WhatsApp -->
   <a
-    href="https://wa.me/918240215306?text=Hi%20The%20healthy%20sip!%20I%20want%20to%20order%20fresh%20juices%20%26%20snacks."
     class="wa-float"
+    href="https://wa.me/918240215306?text=Hi%20The%20Healthy%20Sip!%20I%20want%20to%20place%20an%20order."
     target="_blank"
-    aria-label="Chat on WhatsApp"
+    aria-label="WhatsApp Chat"
   >
     <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
   </a>
 
   <!-- Scroll to top -->
-  <button id="scrollTop" aria-label="Scroll to top">↑</button>
-
-  <!-- BACKGROUND ORBS -->
-  <div class="orb orb-green"></div>
-  <div class="orb orb-orange"></div>
-  <div class="orb orb-yellow"></div>
+  <button id="toTop" aria-label="Scroll to top">↑</button>
 
   <!-- Navbar -->
-  <header class="nav-wrap glass">
+  <header class="nav glass">
     <div class="nav-inner">
-      <div class="brand">
+      <a class="brand" href="#home" aria-label="The Healthy Sip Home">
         <span class="brand-icon">🍹</span>
-        <div class="brand-text">
-          <span class="brand-title">The healthy sip</span>
-          <span class="brand-sub">Jardabagan · Baguiati · Kolkata</span>
-        </div>
-      </div>
+        <span class="brand-text">
+          <span class="brand-title">The Healthy Sip</span>
+          <span class="brand-sub">Kolkata, India</span>
+        </span>
+      </a>
 
-      <nav class="nav-links">
-        <a href="#hero">Home</a>
-        <a href="#special">Special</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#trending">Trending</a>
+        <a href="#offers">Offers</a>
+        <a href="#why">Why Us</a>
         <a href="#menu">Menu</a>
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
-        <a href="#contact">Visit Us</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
-        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        <button id="navToggle" class="nav-toggle" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
 
-    <div class="nav-mobile" id="navMobile">
-      <a href="#hero">Home</a>
-      <a href="#special">Special</a>
+    <div id="navMobile" class="nav-mobile glass-soft" aria-label="Mobile navigation">
+      <a href="#trending">Trending</a>
+      <a href="#offers">Offers</a>
+      <a href="#why">Why Us</a>
       <a href="#menu">Menu</a>
       <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact">Visit Us</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="hero" class="hero">
-    <div class="hero-grid">
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-glow"></div>
+    </div>
+
+    <div class="container hero-grid">
       <div class="hero-left">
-        <div class="hero-pill glass-soft">
-          <span class="dot-live"></span>
-          Open · Closes 11 PM · 4.8★ · 28 reviews
+        <div class="hero-pill glass-soft" data-reveal>
+          <span class="pill-dot"></span>
+          Premium fresh drinks · Kolkata
         </div>
-        <h1>
-          Fresh. Neon. <span>Healthy.</span><br />
-          Kolkata’s coolest juice stop.
+
+        <h1 class="hero-title" data-reveal>
+          Drink Healthy. Live Better. <span class="emoji">🍹</span>
         </h1>
-        <p class="hero-sub">
-          100% fresh fruits · No added sugar · ₹1–200 range · Perfect for
-          post‑gym, chill evenings and late night cravings near Jardabagan bridge,
-          Jyangra, Baguiati.
+
+        <p class="hero-sub" data-reveal data-delay="0.05">
+          Fresh Juices · Smoothies · Energy Snacks<br />
+          Bold flavors. Clean ingredients. Premium vibes.
         </p>
 
-        <div class="hero-cta">
+        <div class="hero-cta" data-reveal data-delay="0.1">
           <a
-            href="https://wa.me/918240215306?text=Hi%20The%20healthy%20sip!%20I%20want%20to%20place%20an%20order."
+            class="btn btn-primary glow"
+            href="https://wa.me/918240215306?text=Hi%20The%20Healthy%20Sip!%20I%20want%20to%20order%20fresh%20juices%20and%20snacks."
             target="_blank"
-            class="btn btn-primary btn-big"
           >
-            Order on WhatsApp
+            Order Now
           </a>
-          <a href="#menu" class="btn btn-outline">View in‑store favourites</a>
+          <a class="btn btn-outline" href="#menu">Explore Menu</a>
         </div>
 
-        <div class="hero-metrics">
-          <div class="metric">
-            <span>4.8★</span>
-            <small>Google rating</small>
+        <div class="hero-mini" data-reveal data-delay="0.15">
+          <div class="mini-card glass-soft">
+            <div class="mini-top">
+              <span class="mini-icon">⚡</span>
+              <span class="mini-title">Fast Service</span>
+            </div>
+            <div class="mini-sub">Fresh on order</div>
           </div>
-          <div class="metric">
-            <span>₹1–200</span>
-            <small>Budget‑friendly</small>
+
+          <div class="mini-card glass-soft">
+            <div class="mini-top">
+              <span class="mini-icon">🧪</span>
+              <span class="mini-title">No Preservatives</span>
+            </div>
+            <div class="mini-sub">Clean blends</div>
           </div>
-          <div class="metric">
-            <span>3+</span>
-            <small>Healthy combos</small>
+
+          <div class="mini-card glass-soft">
+            <div class="mini-top">
+              <span class="mini-icon">✨</span>
+              <span class="mini-title">Premium Taste</span>
+            </div>
+            <div class="mini-sub">Trendy flavors</div>
           </div>
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="hero-card glass">
-          <div class="hero-juice">
-            <div class="hero-juice-liquid"></div>
-            <div class="hero-juice-top"></div>
-            <div class="hero-juice-bubbles b1"></div>
-            <div class="hero-juice-bubbles b2"></div>
-            <div class="hero-juice-bubbles b3"></div>
+      <div class="hero-right" data-reveal data-delay="0.08">
+        <div class="product-card glass">
+          <div class="product-top">
+            <div class="tag neon">TRENDING</div>
+            <div class="spark"></div>
           </div>
-          <div class="hero-fruits">
-            <span class="fruit-chip chip-1">🍊 Orange Zing</span>
-            <span class="fruit-chip chip-2">🥭 Mango Mint</span>
-            <span class="fruit-chip chip-3">🍓 Berry Blast</span>
+
+          <div class="glass-cup">
+            <div class="cup-liquid"></div>
+            <div class="cup-glow"></div>
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
           </div>
-          <div class="hero-rating glass-soft">
-            Best juice shop in Kolkata for
-            <strong>fresh &amp; aesthetic sips.</strong>
+
+          <div class="product-meta">
+            <h3>Midnight Berry Smoothie</h3>
+            <p>Berry · Yogurt · Chia · Zero added sugar</p>
+            <div class="meta-row">
+              <span class="price">₹189</span>
+              <a
+                class="btn btn-mini btn-primary"
+                target="_blank"
+                href="https://wa.me/918240215306?text=I%20want%20Midnight%20Berry%20Smoothie%20from%20The%20Healthy%20Sip."
+              >
+                Quick Order
+              </a>
+            </div>
+          </div>
+
+          <div class="float-icons" aria-hidden="true">
+            <span class="fi fi1">🍓</span>
+            <span class="fi fi2">🥭</span>
+            <span class="fi fi3">🍊</span>
+            <span class="fi fi4">🥤</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Marquee -->
-    <div class="hero-marquee">
-      <div class="marquee-track">
+    <div class="marquee">
+      <div class="marquee-track" aria-hidden="true">
         <span>Best juice shop in Kolkata</span>
-        <span>Healthy juice near me</span>
+        <span>Healthy drinks near me</span>
         <span>Fresh juice Kolkata</span>
-        <span>Cold‑pressed · Smoothies · Snacks</span>
-        <span>Jardabagan bridge · Jyangra · Baguiati</span>
+        <span>Juices 🍊</span>
+        <span>Smoothies 🥤</span>
+        <span>Snacks 🍟</span>
+        <span>Best juice shop in Kolkata</span>
+        <span>Healthy drinks near me</span>
+        <span>Fresh juice Kolkata</span>
+        <span>Juices 🍊</span>
+        <span>Smoothies 🥤</span>
+        <span>Snacks 🍟</span>
       </div>
     </div>
   </section>
 
   <main>
-    <!-- Today’s Special Highlight -->
-    <section id="special" class="section special">
-      <div class="section-head" data-animate="fade-up">
-        <h2>Today’s Glow‑Up Juice ✨</h2>
-        <p>Limited batch, crafted fresh for Kolkata’s weather.</p>
-      </div>
-      <div class="special-grid glass" data-animate="zoom-in">
-        <div class="special-left">
-          <h3>Mango Mint Refresher</h3>
-          <p>
-            Alphonso mango, fresh mint, lemon splash, a hint of pink salt – no
-            preservatives, no added sugar. Perfectly chilled to survive Baguiati
-            traffic and Kolkata humidity.
-          </p>
-          <ul class="special-points">
-            <li>✅ Glow‑boosting vitamin rich blend</li>
-            <li>✅ Made only after you order</li>
-            <li>✅ Pairs perfectly with baked veggie chips</li>
-          </ul>
-
-          <div class="special-cta">
-            <div class="special-price">
-              ₹159 <span class="mrp">₹189</span>
-              <span class="special-tag">Today only</span>
-            </div>
-            <a
-              href="https://wa.me/918240215306?text=I%20want%20to%20order%20Mango%20Mint%20Refresher%20from%20The%20healthy%20sip."
-              class="btn btn-primary"
-              target="_blank"
-            >
-              Order Today’s Special
-            </a>
-          </div>
+    <!-- Trending Drinks -->
+    <section id="trending" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Trending Drinks</h2>
+          <p>Lux flavours + neon glow. Built for modern Kolkata.</p>
         </div>
-        <div class="special-right">
-          <div class="special-visual">
-            <div class="special-circle"></div>
-            <div class="special-cup">
-              <div class="special-liquid"></div>
-              <div class="special-straw"></div>
+
+        <div class="cards">
+          <article class="card glow-border" data-reveal>
+            <div class="card-media media-1"></div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3>Purple Dragon Juice</h3>
+                <span class="chip">New</span>
+              </div>
+              <p>Dragon fruit · Lime · Mint · Ice-cold refresh.</p>
+              <div class="card-row">
+                <span class="price">₹169</span>
+                <button class="btn btn-mini btn-outline order-wa" data-item="Purple Dragon Juice">Order</button>
+              </div>
             </div>
-            <div class="special-label glass-soft">
-              <span>Zero preservatives</span>
-              <span>No added sugar</span>
+          </article>
+
+          <article class="card glow-border" data-reveal data-delay="0.06">
+            <div class="card-media media-2"></div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3>Peach Sunset Smoothie</h3>
+                <span class="chip chip-hot">Hot</span>
+              </div>
+              <p>Peach · Yogurt · Honey hint · Creamy & clean.</p>
+              <div class="card-row">
+                <span class="price">₹189</span>
+                <button class="btn btn-mini btn-outline order-wa" data-item="Peach Sunset Smoothie">Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card glow-border" data-reveal data-delay="0.12">
+            <div class="card-media media-3"></div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3>Orange Spark Cold-Press</h3>
+                <span class="chip chip-best">Best</span>
+              </div>
+              <p>Valencia orange · Ginger · Vitamin-C blast.</p>
+              <div class="card-row">
+                <span class="price">₹149</span>
+                <button class="btn btn-mini btn-outline order-wa" data-item="Orange Spark Cold-Press">Order</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section id="offers" class="section section-dark">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Special Offers</h2>
+          <p>Neon deals that make your wallet smile.</p>
+        </div>
+
+        <div class="offer-grid">
+          <div class="offer glass" data-reveal>
+            <div class="offer-badge neon">BUY 1 GET 1 FREE</div>
+            <h3>Happy Hour Duo</h3>
+            <p>Bring a friend. Pick 2 drinks from the trending list.</p>
+            <div class="offer-row">
+              <span class="offer-note">Limited time • Ask on WhatsApp</span>
+              <a
+                class="btn btn-primary btn-mini"
+                target="_blank"
+                href="https://wa.me/918240215306?text=Hi%20The%20Healthy%20Sip!%20Is%20Buy%201%20Get%201%20Free%20available%20today%3F"
+              >
+                Claim Offer
+              </a>
+            </div>
+          </div>
+
+          <div class="offer glass" data-reveal data-delay="0.08">
+            <div class="offer-badge neon alt">COMBO SAVE</div>
+            <h3>Energy Snack Combo</h3>
+            <p>Smoothie + baked snack combo with neon discount badge.</p>
+            <div class="offer-row">
+              <span class="offer-note">Great for gym / office</span>
+              <a
+                class="btn btn-outline btn-mini"
+                target="_blank"
+                href="https://wa.me/918240215306?text=I%20want%20the%20Energy%20Snack%20Combo%20from%20The%20Healthy%20Sip."
+              >
+                Order Combo
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Healthy Combos -->
-    <section class="section combos">
-      <div class="section-head" data-animate="fade-up">
-        <h2>Healthy Combos that Actually Slap 🔥</h2>
-        <p>Perfect for gym, office and late‑night adda near Jardabagan bridge.</p>
-      </div>
-      <div class="card-grid">
-        <article class="combo-card glass-soft" data-animate="fade-up">
-          <span class="combo-tag">Morning Fix</span>
-          <h3>Breakfast Power Combo</h3>
-          <p>Any fresh juice + oats bowl + seasonal fruit cup.</p>
-          <div class="combo-meta">
-            <span>15% OFF · Till 11:30 AM</span>
-            <span>Light, clean &amp; filling</span>
-          </div>
-          <div class="combo-foot">
-            <span class="price">₹249</span>
-            <button class="btn btn-mini order-wa">Order on WhatsApp</button>
-          </div>
-        </article>
-
-        <article class="combo-card glass-soft" data-animate="fade-up" data-delay="0.1">
-          <span class="combo-tag">Gym Fam</span>
-          <h3>Protein Gym Buddy</h3>
-          <p>High‑protein smoothie + roasted nut mix.</p>
-          <div class="combo-meta">
-            <span>20% OFF · Post‑workout fav</span>
-            <span>No refined sugar</span>
-          </div>
-          <div class="combo-foot">
-            <span class="price">₹279</span>
-            <button class="btn btn-mini order-wa">Order on WhatsApp</button>
-          </div>
-        </article>
-
-        <article class="combo-card glass-soft" data-animate="fade-up" data-delay="0.2">
-          <span class="combo-tag">Evening Vibes</span>
-          <h3>Sunset Chill Combo</h3>
-          <p>Cooling juice + baked veggie chips.</p>
-          <div class="combo-meta">
-            <span>Flat ₹50 OFF · After 4 PM</span>
-            <span>Perfect with friends</span>
-          </div>
-          <div class="combo-foot">
-            <span class="price">₹229</span>
-            <button class="btn btn-mini order-wa">Order on WhatsApp</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Why Us (pill style) -->
-    <section class="section why">
-      <div class="section-head" data-animate="fade-up">
-        <h2>Why Kolkata Loves The healthy sip</h2>
-      </div>
-      <div class="why-row">
-        <div class="why-pill glass-soft" data-animate="slide-up">
-          <span>🍎 100% Fresh Fruits</span>
+    <!-- Why Choose Us -->
+    <section id="why" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Why Choose Us</h2>
+          <p>Premium brand feel — without premium attitude.</p>
         </div>
-        <div class="why-pill glass-soft" data-animate="slide-up" data-delay="0.05">
-          <span>🚫 No Preservatives or Syrups</span>
-        </div>
-        <div class="why-pill glass-soft" data-animate="slide-up" data-delay="0.1">
-          <span>💸 ₹1–200 · Pocket‑friendly</span>
-        </div>
-        <div class="why-pill glass-soft" data-animate="slide-up" data-delay="0.15">
-          <span>⚡ Fast Service · Fresh on Order</span>
+
+        <div class="why-grid">
+          <div class="why-card glass-soft" data-reveal>
+            <div class="why-icon glow-i">🥭</div>
+            <h3>Fresh Ingredients</h3>
+            <p>Only real fruits &amp; clean mixes — no shortcuts.</p>
+          </div>
+          <div class="why-card glass-soft" data-reveal data-delay="0.06">
+            <div class="why-icon glow-i">🚫</div>
+            <h3>No Preservatives</h3>
+            <p>Zero syrups. Zero preservatives. Just freshness.</p>
+          </div>
+          <div class="why-card glass-soft" data-reveal data-delay="0.12">
+            <div class="why-icon glow-i">💸</div>
+            <h3>Affordable Prices</h3>
+            <p>Luxury look, pocket-friendly pricing.</p>
+          </div>
+          <div class="why-card glass-soft" data-reveal data-delay="0.18">
+            <div class="why-icon glow-i">⚡</div>
+            <h3>Quick Service</h3>
+            <p>Fast prep. Fresh taste. Zero waiting drama.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Menu -->
-    <section id="menu" class="section menu">
-      <div class="section-head" data-animate="fade-up">
-        <h2>Menu Highlights</h2>
-        <p>
-          Swipe through our top picks. Full digital menu at
-          <a href="https://the-healthy-sip.mini.store" target="_blank">
-            the-healthy-sip.mini.store
-          </a>
-        </p>
-      </div>
-
-      <div class="menu-tabs">
-        <button class="menu-tab active" data-menu="juices">Fresh Juices 🍊</button>
-        <button class="menu-tab" data-menu="smoothies">Smoothies 🥤</button>
-        <button class="menu-tab" data-menu="snacks">Healthy Snacks 🥗</button>
-      </div>
-
-      <div class="menu-wrap">
-        <div class="menu-list active" id="menu-juices">
-          <article class="menu-card glass-soft" data-animate="zoom-in">
-            <div class="menu-thumb j1"></div>
-            <div class="menu-body">
-              <h3>Orange Glow</h3>
-              <p>Classic fresh orange with high vitamin C kick.</p>
-              <span class="menu-price">₹139</span>
-            </div>
-          </article>
-          <article class="menu-card glass-soft" data-animate="zoom-in" data-delay="0.1">
-            <div class="menu-thumb j2"></div>
-            <div class="menu-body">
-              <h3>Watermelon Cooler</h3>
-              <p>Super hydrating, no sugar, only fruit.</p>
-              <span class="menu-price">₹129</span>
-            </div>
-          </article>
-          <article class="menu-card glass-soft" data-animate="zoom-in" data-delay="0.2">
-            <div class="menu-thumb j3"></div>
-            <div class="menu-body">
-              <h3>ABC Detox</h3>
-              <p>Apple · Beetroot · Carrot – cleanse &amp; reset.</p>
-              <span class="menu-price">₹159</span>
-            </div>
-          </article>
+    <section id="menu" class="section section-dark">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Menu</h2>
+          <p>Dark luxury + colorful cards. Tap a category.</p>
         </div>
 
-        <div class="menu-list" id="menu-smoothies">
-          <article class="menu-card glass-soft" data-animate="zoom-in">
-            <div class="menu-thumb s1"></div>
-            <div class="menu-body">
-              <h3>Banana Peanut Protein</h3>
-              <p>Oats, banana, peanut butter &amp; milk.</p>
-              <span class="menu-price">₹179</span>
-            </div>
-          </article>
-          <article class="menu-card glass-soft" data-animate="zoom-in" data-delay="0.1">
-            <div class="menu-thumb s2"></div>
-            <div class="menu-body">
-              <h3>Berry Burst</h3>
-              <p>Mixed berries with yogurt, no ice‑cream.</p>
-              <span class="menu-price">₹189</span>
-            </div>
-          </article>
-          <article class="menu-card glass-soft" data-animate="zoom-in" data-delay="0.2">
-            <div class="menu-thumb s3"></div>
-            <div class="menu-body">
-              <h3>Tropical Sunshine</h3>
-              <p>Mango, pineapple &amp; coconut milk.</p>
-              <span class="menu-price">₹189</span>
-            </div>
-          </article>
+        <div class="tabs" data-reveal data-delay="0.05">
+          <button class="tab active" data-tab="juices">Juices 🍊</button>
+          <button class="tab" data-tab="smoothies">Smoothies 🥤</button>
+          <button class="tab" data-tab="snacks">Snacks 🍟</button>
         </div>
 
-        <div class="menu-list" id="menu-snacks">
-          <article class="menu-card glass-soft" data-animate="zoom-in">
-            <div class="menu-thumb n1"></div>
-            <div class="menu-body">
-              <h3>Baked Veggie Chips</h3>
-              <p>Crunch without the guilt, air‑baked.</p>
-              <span class="menu-price">₹119</span>
-            </div>
-          </article>
-          <article class="menu-card glass-soft" data-animate="zoom-in" data-delay="0.1">
-            <div class="menu-thumb n2"></div>
-            <div class="menu-body">
-              <h3>Roasted Nut Mix</h3>
-              <p>Almonds, cashews, seeds &amp; light spices.</p>
-              <span class="menu-price">₹149</span>
-            </div>
-          </article>
-          <article class="menu-card glass-soft" data-animate="zoom-in" data-delay="0.2">
-            <div class="menu-thumb n3"></div>
-            <div class="menu-body">
-              <h3>Greek Salad Cup</h3>
-              <p>Cucumber, olives, feta &amp; crisp greens.</p>
-              <span class="menu-price">₹169</span>
-            </div>
-          </article>
+        <div class="menu-grid">
+          <div class="menu-panel active" id="tab-juices">
+            <article class="menu-card glass-soft" data-reveal>
+              <div class="menu-icon">🍊</div>
+              <div>
+                <h3>Orange Spark</h3>
+                <p>Cold-pressed orange + ginger</p>
+                <div class="menu-row">
+                  <span class="price">₹149</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Orange Spark">Order</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card glass-soft" data-reveal data-delay="0.06">
+              <div class="menu-icon">🍉</div>
+              <div>
+                <h3>Watermelon Chill</h3>
+                <p>Hydration boost, summer-ready</p>
+                <div class="menu-row">
+                  <span class="price">₹129</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Watermelon Chill">Order</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card glass-soft" data-reveal data-delay="0.12">
+              <div class="menu-icon">🥕</div>
+              <div>
+                <h3>ABC Detox</h3>
+                <p>Apple · Beetroot · Carrot</p>
+                <div class="menu-row">
+                  <span class="price">₹159</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="ABC Detox">Order</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="menu-panel" id="tab-smoothies">
+            <article class="menu-card glass-soft" data-reveal>
+              <div class="menu-icon">🍓</div>
+              <div>
+                <h3>Midnight Berry</h3>
+                <p>Berries · Yogurt · Chia</p>
+                <div class="menu-row">
+                  <span class="price">₹189</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Midnight Berry">Order</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card glass-soft" data-reveal data-delay="0.06">
+              <div class="menu-icon">🍌</div>
+              <div>
+                <h3>Banana Protein</h3>
+                <p>Oats · Banana · Peanut butter</p>
+                <div class="menu-row">
+                  <span class="price">₹179</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Banana Protein">Order</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card glass-soft" data-reveal data-delay="0.12">
+              <div class="menu-icon">🥭</div>
+              <div>
+                <h3>Mango Mint</h3>
+                <p>Mango · Mint · Lemon splash</p>
+                <div class="menu-row">
+                  <span class="price">₹159</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Mango Mint">Order</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="menu-panel" id="tab-snacks">
+            <article class="menu-card glass-soft" data-reveal>
+              <div class="menu-icon">🥗</div>
+              <div>
+                <h3>Greek Salad Cup</h3>
+                <p>Fresh greens · feta · olives</p>
+                <div class="menu-row">
+                  <span class="price">₹169</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Greek Salad Cup">Order</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card glass-soft" data-reveal data-delay="0.06">
+              <div class="menu-icon">🥜</div>
+              <div>
+                <h3>Roasted Nut Mix</h3>
+                <p>Almonds · seeds · light spice</p>
+                <div class="menu-row">
+                  <span class="price">₹149</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Roasted Nut Mix">Order</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card glass-soft" data-reveal data-delay="0.12">
+              <div class="menu-icon">🍟</div>
+              <div>
+                <h3>Baked Veggie Chips</h3>
+                <p>Crunchy · oil-lite · guilt-free</p>
+                <div class="menu-row">
+                  <span class="price">₹119</span>
+                  <button class="btn btn-mini btn-outline order-wa" data-item="Baked Veggie Chips">Order</button>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Gallery -->
-    <section id="gallery" class="section gallery">
-      <div class="section-head" data-animate="fade-up">
-        <h2>Vibes from The healthy sip</h2>
-        <p>Perfect for Insta stories, reels &amp; chill evenings.</p>
-      </div>
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Gallery</h2>
+          <p>Hover to feel the vibe — tap to zoom.</p>
+        </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item" data-animate="zoom-in">
-          <img src="https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fresh juice glass" />
+        <div class="gallery-grid">
+          <div class="g-item" data-reveal>
+            <img src="https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Fresh juice glass" />
+          </div>
+          <div class="g-item" data-reveal data-delay="0.04">
+            <img src="https://images.pexels.com/photos/6546023/pexels-photo-6546023.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Assorted juices" />
+          </div>
+          <div class="g-item" data-reveal data-delay="0.08">
+            <img src="https://images.pexels.com/photos/3731479/pexels-photo-3731479.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Smoothie bowl" />
+          </div>
+          <div class="g-item" data-reveal data-delay="0.12">
+            <img src="https://images.pexels.com/photos/4113800/pexels-photo-4113800.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Healthy snack" />
+          </div>
+          <div class="g-item" data-reveal data-delay="0.16">
+            <img src="https://images.pexels.com/photos/4113896/pexels-photo-4113896.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Fruit platter" />
+          </div>
+          <div class="g-item" data-reveal data-delay="0.2">
+            <img src="https://images.pexels.com/photos/5946086/pexels-photo-5946086.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Juice bar counter" />
+          </div>
         </div>
-        <div class="gallery-item" data-animate="zoom-in" data-delay="0.05">
-          <img src="https://images.pexels.com/photos/6546023/pexels-photo-6546023.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted juices" />
-        </div>
-        <div class="gallery-item" data-animate="zoom-in" data-delay="0.1">
-          <img src="https://images.pexels.com/photos/3731479/pexels-photo-3731479.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Smoothie bowl" />
-        </div>
-        <div class="gallery-item" data-animate="zoom-in" data-delay="0.15">
-          <img src="https://images.pexels.com/photos/4113800/pexels-photo-4113800.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Healthy snack" />
-        </div>
-        <div class="gallery-item" data-animate="zoom-in" data-delay="0.2">
-          <img src="https://images.pexels.com/photos/4113896/pexels-photo-4113896.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fruit platter" />
-        </div>
-        <div class="gallery-item" data-animate="zoom-in" data-delay="0.25">
-          <img src="https://images.pexels.com/photos/5946086/pexels-photo-5946086.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Juice bar counter" />
-        </div>
-      </div>
 
-      <!-- Lightbox -->
-      <div id="lightbox" class="lightbox">
-        <div class="lightbox-inner">
-          <span id="lightboxClose" class="lightbox-close">&times;</span>
-          <img id="lightboxImg" src="" alt="Preview" />
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+          <div class="lightbox-inner glass">
+            <button id="lightboxClose" class="lightbox-close" aria-label="Close">×</button>
+            <img id="lightboxImg" src="" alt="Preview" />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Reviews -->
-    <section id="reviews" class="section reviews">
-      <div class="section-head" data-animate="fade-up">
-        <h2>Google Love from Kolkata</h2>
-        <p>Real people. Real reviews. Real freshness.</p>
-      </div>
-
-      <div class="review-header glass-soft" data-animate="zoom-in">
-        <div class="review-score">
-          <span class="score">4.8</span>
-          <span class="stars animated-stars">★★★★★</span>
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Reviews</h2>
+          <p>Glass cards + soft blur. Star shine animation.</p>
         </div>
-        <div class="review-info">
-          <p>28+ Google reviews · ₹1–200 · Juice shop</p>
-          <p>Near Jardabagan bridge, Jyangra, Baguiati, Kolkata</p>
+
+        <div class="review-head glass-soft" data-reveal>
+          <div class="review-score">
+            <div class="score">4.8</div>
+            <div class="stars animated-stars" aria-label="Rating stars">★★★★★</div>
+          </div>
+          <div class="review-note">
+            Based on Google reviews · Kolkata
+          </div>
         </div>
-      </div>
 
-      <div class="review-grid">
-        <article class="review-card glass-soft" data-animate="fade-up">
-          <div class="review-top">
-            <div class="avatar">A</div>
-            <div>
-              <h3>Arijit Ghosh</h3>
-              <span class="stars">★★★★★</span>
+        <div class="review-grid">
+          <article class="review-card glass" data-reveal>
+            <div class="review-top">
+              <div class="avatar">A</div>
+              <div>
+                <h3>Arijit</h3>
+                <div class="stars">★★★★★</div>
+              </div>
             </div>
-          </div>
-          <p>
-            “Best juice shop in Kolkata hands down. Flavours are clean, light and
-            actually make you feel good – not heavy or sugary.”
-          </p>
-        </article>
+            <p>“Premium vibe and super fresh taste. Best juice shop in Kolkata!”</p>
+          </article>
 
-        <article class="review-card glass-soft" data-animate="fade-up" data-delay="0.1">
-          <div class="review-top">
-            <div class="avatar">S</div>
-            <div>
-              <h3>Sneha Chakraborty</h3>
-              <span class="stars">★★★★★</span>
+          <article class="review-card glass" data-reveal data-delay="0.06">
+            <div class="review-top">
+              <div class="avatar">S</div>
+              <div>
+                <h3>Sneha</h3>
+                <div class="stars">★★★★★</div>
+              </div>
             </div>
-          </div>
-          <p>
-            “Perfect spot after college &amp; work. Smoothies are thick, aesthetic
-            and still healthy. Love the vibe near Baguiati.”
-          </p>
-        </article>
+            <p>“Smoothies are clean, not too sweet — and the place looks amazing.”</p>
+          </article>
 
-        <article class="review-card glass-soft" data-animate="fade-up" data-delay="0.2">
-          <div class="review-top">
-            <div class="avatar">R</div>
-            <div>
-              <h3>Rahul Singh</h3>
-              <span class="stars">★★★★☆</span>
+          <article class="review-card glass" data-reveal data-delay="0.12">
+            <div class="review-top">
+              <div class="avatar">R</div>
+              <div>
+                <h3>Rahul</h3>
+                <div class="stars">★★★★☆</div>
+              </div>
             </div>
-          </div>
-          <p>
-            “Fast service, fair prices and super consistent taste. Their ABC detox
-            and Mango Mint are now part of my weekly routine.”
-          </p>
-        </article>
+            <p>“Fast service and affordable prices. Perfect healthy drinks near me.”</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section contact">
-      <div class="section-head" data-animate="fade-up">
-        <h2>Visit The healthy sip</h2>
-        <p>
-          Drop by for a quick recharge or chill session. We’re right around
-          <strong>Jardabagan bridge, Jyangra, Baguiati, Kolkata, West Bengal 700159</strong>.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card glass" data-animate="zoom-in">
-          <h3>Store Details</h3>
-          <p class="contact-line">
-            <strong>Address:</strong><br />
-            Jardabagan bridge, Jyangra, Baguiati,<br />
-            Kolkata, West Bengal 700159
-          </p>
-          <p class="contact-line">
-            <strong>Hours:</strong><br />
-            Open daily · Closes 11:00 PM
-          </p>
-          <p class="contact-line">
-            <strong>Phone:</strong><br />
-            <a href="tel:+918240215306">+91 8240215306</a>
-          </p>
-          <p class="contact-line">
-            <strong>Online Ordering:</strong><br />
-            <a href="https://the-healthy-sip.mini.store" target="_blank">
-              the-healthy-sip.mini.store
-            </a>
-          </p>
-
-          <div class="contact-actions">
-            <a href="tel:+918240215306" class="btn btn-primary">Call Now</a>
-            <a
-              href="https://wa.me/918240215306?text=Hi%20The%20healthy%20sip!"
-              target="_blank"
-              class="btn btn-outline"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-
-          <div class="social">
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-              <img
-                src="https://img.icons8.com/fluency/48/instagram-new.png"
-                alt="Instagram"
-              />
-            </a>
-          </div>
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2>Contact</h2>
+          <p>Call, WhatsApp, or visit us in Kolkata.</p>
         </div>
 
-        <div class="map-card glass" data-animate="zoom-in" data-delay="0.1">
-          <!-- Replace this embed with your exact Google Maps embed link -->
-          <iframe
-            title="The healthy sip Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.7323999999998!2d88.3639!3d22.5726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKolkata!5e0!3m2!1sen!2sin!4v1610000000000"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div class="contact-grid">
+          <div class="contact-card glass" data-reveal>
+            <h3>The Healthy Sip</h3>
+            <p class="contact-line">
+              <strong>Location:</strong> Kolkata, India
+            </p>
+            <p class="contact-line">
+              <strong>Phone:</strong>
+              <a href="tel:+918240215306">+91 8240215306</a>
+            </p>
+
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="tel:+918240215306">Call Now</a>
+              <a
+                class="btn btn-outline"
+                target="_blank"
+                href="https://wa.me/918240215306?text=Hi%20The%20Healthy%20Sip!%20I%20want%20to%20know%20today%27s%20offers."
+              >
+                WhatsApp
+              </a>
+            </div>
+
+            <div class="seo-line">
+              <span>Best juice shop in Kolkata</span> ·
+              <span>Healthy drinks near me</span> ·
+              <span>Fresh juice Kolkata</span>
+            </div>
+          </div>
+
+          <div class="map glass" data-reveal data-delay="0.08">
+            <!-- Replace this with your exact shop embed -->
+            <iframe
+              title="Google Map - The Healthy Sip Kolkata"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.7323999999998!2d88.3639!3d22.5726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKolkata!5e0!3m2!1sen!2sin!4v1610000000000"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer glass-soft">
-    <p>© <span id="year"></span> The healthy sip · Kolkata.</p>
-    <p class="footer-keywords">
-      Best juice shop in Kolkata · Healthy juice near me · Fresh juice Kolkata
-    </p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> The Healthy Sip · Kolkata</div>
+      <div class="footer-sub">
+        Premium neon drinks · Glassmorphism UI · Modern brand feel
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
